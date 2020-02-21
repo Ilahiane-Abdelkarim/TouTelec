@@ -1,0 +1,33 @@
+<div class="d-flex flex-column align-items-center justify-content-center h-100 py-2">
+    <!-- Default form login -->
+    <h1 class="py-5 primary_clr">Bienvenu Sur <span class="font-weight-bolder">Tou</span><span class="tertiary_clr">Telec</span></h1>
+<div class="text-center p-5">
+
+    <p class="h4 mb-4">Se Connecter</p>
+
+    <!-- Email -->
+    <input type="email" id="login_f_e" class="form-control mb-4" placeholder="E-mail">
+
+    <!-- Password -->
+    <input type="password" id="login_f_p" class="form-control mb-4" placeholder="Mot de passe">
+
+    <div class="d-flex justify-content-around">
+        <div>
+            <!-- Remember me -->
+            <div class="custom-control custom-checkbox pr-3">
+                <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
+                <label class="custom-control-label" for="defaultLoginFormRemember">Souviens de moi</label>
+            </div>
+        </div>
+        <div>
+            <!-- Forgot password -->
+            <a href="" class="tertiary_clr">Mot de passe oublié?</a>
+        </div>
+    </div>
+
+    <!-- Sign in button -->
+    <button class="btn btn-warning tertiary_btn text-white font-weight-bold btn-block my-4 shadow" [routerLink]="['/home']">Sign in</button>
+
+</div>
+<!-- Default form login -->
+</div>

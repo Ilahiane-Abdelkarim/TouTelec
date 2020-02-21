@@ -1,0 +1,102 @@
+<!-- Main Sidebar Container -->
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a class="brand-link text-center" data-widget="pushmenu">
+      <span class="font-weight-bold logo_clr">Tou<span class="font-weight-light">T<span class="brand-text">elect</span></span></span>
+    </a>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="../assets/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">Alexander Pierce</a>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+
+               <!-- Forfaits -->
+               <li class="nav-item has-treeview">
+                <a class="nav-link pointeur">
+                  <i class="nav-icon fas fa-edit"></i>
+                  <p>
+                    Forfaits
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a [routerLink]="['/forfaits/list']" class="nav-link">
+                      <i class="far fa-circle nav-icon text-info"></i>
+                      <p>List</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a [routerLink]="['/forfaits/new']" class="nav-link">
+                      <i class="far fa-circle nav-icon text-warning"></i>
+                      <p>Nouveaux</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a [routerLink]="['/forfaits/archive']" class="nav-link">
+                      <i class="far fa-circle nav-icon text-danger"></i>
+                      <p>Archive</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- Contrats -->
+              <li class="nav-item has-treeview">
+                <a class="nav-link pointeur">
+                  <i class="nav-icon fas fa-copy"></i>
+                  <p>
+                    Contrats
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a [routerLink]="['/contracts/list']" class="nav-link">
+                      <i class="far fa-circle nav-icon text-info"></i>
+                      <p>List</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a [routerLink]="['/contracts/new']" class="nav-link">
+                      <i class="far fa-circle nav-icon text-warning"></i>
+                      <p>Nouveaux</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a [routerLink]="['/contracts/archive']" class="nav-link">
+                      <i class="far fa-circle nav-icon text-danger"></i>
+                      <p>Archive</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              
+          <li class="nav-item">
+            <a [routerLink]="['/clients/list']" class="nav-link">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                Clients
+              </p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <div id="sidebar-overlay" data-widget="pushmenu"></div>

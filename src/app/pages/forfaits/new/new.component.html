@@ -1,0 +1,301 @@
+
+<div class="content-wrapper pb-4">
+    <h2 class="py-lg-5 my-5 text-center font-weight-light"><span class="font-weight-bold">Nouveaux </span><span class="tertiary_clr">Forfaits</span></h2>
+
+    <!-- <div class="container">
+        <div class="row mx-lg-3">
+            <div class="col-12 col-sm-6 col-md-6 px-md-5 mb-3">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text secondary_bg seconday_clr font-weight-light" id="Nom_forfait"><span class="font-weight-normal">N</span>om:</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Nom" aria-label="Nom" aria-describedby="Nom_forfait">
+                  </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 px-md-5 mb-3">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text secondary_bg seconday_clr font-weight-light" id="Prix_forfait"><span class="font-weight-normal">P</span>rix:</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Prix" aria-label="Prix" aria-describedby="Prix_forfait">
+                    <div class="input-group-append">
+                        <span class="input-group-text secondary_bg seconday_clr font-weight-bold">DH</span>
+                      </div>
+                  </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 px-md-5 mb-3">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text secondary_bg seconday_clr font-weight-light" for="Type_forfait"><span class="font-weight-normal">T</span>ype:</span>
+                    </div>
+                    <select class="custom-select" id="Type_forfait">
+                        <option selected disabled>Choose...</option>
+                        <option value="1">1 mois</option>
+                        <option value="2">2 mois</option>
+                        <option value="3">3 mois</option>
+                        <option value="4">4 mois</option>
+                        <option value="5">5 mois</option>
+                        <option value="6">6 mois</option>
+                        <option value="7">7 mois</option>
+                        <option value="8">8 mois</option>
+                        <option value="9">9 mois</option>
+                        <option value="10">10 mois</option>
+                        <option value="11">11 mois</option>
+                        <option value="12">12 mois</option>
+                        <option value="13">1 ans</option>
+                        <option value="14">2 ans</option>
+                        <option value="15">4 ans</option>
+                      </select>
+                  </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-6 px-md-5 mb-3">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text secondary_bg seconday_clr font-weight-light" id="Internet_forfait"><span class="font-weight-normal">I</span>nternet:</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Internet" aria-label="Internet" aria-describedby="Internet_forfait">
+                    <div class="input-group-append">
+                        <span class="input-group-text secondary_bg seconday_clr font-weight-bold">G<small class="font-weight-bold">O</small></span>
+                      </div>
+                  </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 px-md-5 mb-3">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text secondary_bg seconday_clr font-weight-light" id="Appel_forfait"><span class="font-weight-normal">A</span>ppel(s):</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Appel" aria-label="Appel" aria-describedby="Appel_forfait">
+                    <div class="input-group-append">
+                        <span class="input-group-text secondary_bg seconday_clr font-weight-bold">H</span>
+                      </div>
+                  </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 px-md-5 mb-3">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text secondary_bg seconday_clr font-weight-light" id="Solde_forfait"><span class="font-weight-normal">S</span>olde:</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Solde" aria-label="Solde" aria-describedby="Solde_forfait">
+                    <div class="input-group-append">
+                        <span class="input-group-text secondary_bg seconday_clr font-weight-bold">DH</span>
+                      </div>
+                  </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 px-md-5 mb-3">
+              <div class="row w-100 mx-auto">
+                <div class="col-6 pl-0">
+                  <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text secondary_bg seconday_clr font-weight-light" id="national_forfait"><span class="font-weight-normal">N</span>ational:</span>
+                      </div>
+                      <form [formGroup]="checkboxGroupForm" class="flex-1-1">
+                          <div class="btn-group btn-group-toggle w-100 brd-top-bot">
+                            <label class="btn-primary brd-r-none brd-top-bot" ngbButtonLabel>
+                              <input type="checkbox" formControlName="national" ngbButton> {{(checkboxGroupForm.value['national'])?'Oui':'Non'}}
+                            </label>
+                          </div>
+                        </form>
+                    </div>
+              </div>
+              <div class="col-6 pr-0">
+                  <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text secondary_bg seconday_clr font-weight-light" id="international_forfait"><span class="font-weight-normal">I</span>nternational:</span>
+                      </div>
+                      <form [formGroup]="checkboxGroupForm" class="flex-1-1">
+                          <div class="btn-group btn-group-toggle w-100 brd-top-bot">
+                            <label class="btn-primary brd-r-none brd-top-bot" ngbButtonLabel>
+                              <input type="checkbox" formControlName="international" ngbButton> {{(checkboxGroupForm.value['international'])?'Oui':'Non'}}
+                            </label>
+                          </div>
+                        </form>
+                    </div>
+              </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 px-md-5 mb-3">
+              <div class="row w-100 mx-auto">
+                <div class="col-6 pl-0">
+                  <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text secondary_bg seconday_clr font-weight-light" id="orange_forfait"><span class="font-weight-normal">I</span>llimités Orange:</span>
+                      </div>
+                      <form [formGroup]="checkboxGroupForm" class="flex-1-1">
+                          <div class="btn-group btn-group-toggle w-100 brd-top-bot">
+                            <label class="btn-primary brd-r-none brd-top-bot" ngbButtonLabel>
+                              <input type="checkbox" formControlName="orange" ngbButton> {{(checkboxGroupForm.value['orange'])?'Oui':'Non'}}
+                            </label>
+                          </div>
+                        </form>
+                    </div>
+              </div>
+              <div class="col-6 mx-auto pr-0">
+                <form class="form-inline">
+                    <div class="form-group w-100">
+                      <div class="input-group flex-1-2">
+                        <input class="form-control" placeholder="yyyy-mm-dd"
+                               name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"><i class="fa fa-calendar-week"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+            </div>
+              </div>
+            </div>
+            
+        </div>
+    </div> -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6 px-sm-5">
+          <div class="row">
+            <div class="col-12">
+              <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text secondary_bg seconday_clr font-weight-light black_box_2 text-center d-block" id="Nom_forfait"><span class="font-weight-normal">N</span>om:</span>
+                  </div>
+                  <input type="text" class="form-control" placeholder="Nom" aria-label="Nom" aria-describedby="Nom_forfait">
+                </div>
+          </div>
+          <div class="col-12">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text secondary_bg seconday_clr font-weight-light black_box_2 text-center d-block" for="Type_forfait"><span class="font-weight-normal">T</span>ype:</span>
+                </div>
+                <select class="custom-select" id="Type_forfait">
+                    <option selected disabled>Choose...</option>
+                    <option value="1">1 mois</option>
+                    <option value="2">2 mois</option>
+                    <option value="3">3 mois</option>
+                    <option value="4">4 mois</option>
+                    <option value="5">5 mois</option>
+                    <option value="6">6 mois</option>
+                    <option value="7">7 mois</option>
+                    <option value="8">8 mois</option>
+                    <option value="9">9 mois</option>
+                    <option value="10">10 mois</option>
+                    <option value="11">11 mois</option>
+                    <option value="12">1 ans</option>
+                    <option value="13">2 ans</option>
+                    <option value="14">4 ans</option>
+                  </select>
+              </div>
+        </div>
+        <div class="col-12">
+          <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text secondary_bg seconday_clr font-weight-light black_box_2 text-center d-block" id="Prix_forfait"><span class="font-weight-normal">P</span>rix:</span>
+              </div>
+              <input type="text" class="form-control" placeholder="Prix" aria-label="Prix" aria-describedby="Prix_forfait">
+              <div class="input-group-append">
+                  <span class="input-group-text secondary_bg seconday_clr font-weight-bold black_box">DH</span>
+                </div>
+            </div>
+      </div>
+      <div class="col-12">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text secondary_bg seconday_clr font-weight-light black_box_2 text-center d-block" id="Solde_forfait"><span class="font-weight-normal">S</span>olde:</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Solde" aria-label="Solde" aria-describedby="Solde_forfait">
+            <div class="input-group-append">
+                <span class="input-group-text secondary_bg seconday_clr font-weight-bold black_box">DH</span>
+              </div>
+          </div>
+    </div>
+    <div class="col-12">
+      <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text secondary_bg seconday_clr font-weight-light black_box_2 text-center d-block" id="Internet_forfait"><span class="font-weight-normal">I</span>nternet:</span>
+          </div>
+          <input type="text" class="form-control" placeholder="Internet" aria-label="Internet" aria-describedby="Internet_forfait">
+          <div class="input-group-append">
+              <span class="input-group-text secondary_bg seconday_clr font-weight-bold black_box">G<small class="font-weight-bold">O</small></span>
+            </div>
+        </div>
+    </div>
+      <div class="col-12">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text secondary_bg seconday_clr font-weight-light black_box_2 text-center d-block" id="Appel_forfait"><span class="font-weight-normal">A</span>ppel(s):</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Appel" aria-label="Appel" aria-describedby="Appel_forfait">
+            <div class="input-group-append">
+                <span class="input-group-text secondary_bg seconday_clr font-weight-bold black_box text-center d-block">H</span>
+              </div>
+          </div>
+    </div>
+    
+    
+          </div>
+        </div>
+        <div class="col-12 col-md-6 px-sm-5">
+          <div class="row">
+            <!--DATE FORM-->
+            <!-- <div class="col-12">
+              <form class="form-inline mb-3">
+                <div class="form-group w-100">
+                  <div class="input-group flex-1-2">
+                    <input class="form-control" placeholder="yyyy-mm-dd"
+                            name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"><i class="fa fa-calendar-week"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div> -->
+            <div class="col-12 col-sm-6 col-md-12 col-lg-10 col-xl-7 pr-lg-5 mr-auto">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text secondary_bg seconday_clr font-weight-light black_box_3 text-center d-block" id="orange_forfait"><span class="font-weight-normal">I</span>llimités Orange:</span>
+                </div>
+                <form [formGroup]="checkboxGroupForm" class="flex-1-1">
+                  <div class="btn-group btn-group-toggle w-100 brd-top-bot">
+                    <label class="btn-primary brd-r-none brd-top-bot" ngbButtonLabel>
+                      <input type="checkbox" formControlName="orange" ngbButton> {{(checkboxGroupForm.value['orange'])?'Oui':'Non'}}
+                    </label>
+                  </div>
+                  </form>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-12 col-lg-10 col-xl-7 pr-lg-5 mr-auto">
+              <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text secondary_bg seconday_clr font-weight-light black_box_3 text-center d-block" id="international_forfait"><span class="font-weight-normal">I</span>nternational:</span>
+                  </div>
+                  <form [formGroup]="checkboxGroupForm" class="flex-1-1">
+                      <div class="btn-group btn-group-toggle w-100 brd-top-bot">
+                        <label class="btn-primary brd-r-none brd-top-bot" ngbButtonLabel>
+                          <input type="checkbox" formControlName="international" ngbButton> {{(checkboxGroupForm.value['international'])?'Oui':'Non'}}
+                        </label>
+                      </div>
+                    </form>
+                </div>
+          </div>
+            <div class="col-12 col-md-12 col-lg-10 col-xl-7 pr-lg-5 ml-auto ml-lg-0 mr-auto">
+              <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text secondary_bg seconday_clr font-weight-light black_box_3 text-center d-block" id="national_forfait"><span class="font-weight-normal">N</span>ational:</span>
+                  </div>
+                  <form [formGroup]="checkboxGroupForm" class="flex-1-1">
+                      <div class="btn-group btn-group-toggle w-100 brd-top-bot">
+                        <label class="btn-primary brd-r-none brd-top-bot" ngbButtonLabel>
+                          <input type="checkbox" formControlName="national" ngbButton> {{(checkboxGroupForm.value['national'])?'Oui':'Non'}}
+                        </label>
+                      </div>
+                    </form>
+                </div>
+          </div>
+          <div class="col-12 mt-0 mt-md-5 pt-md-5">
+            <button type="button" class="btn btn-success mr-auto mr-lg-0 w-100 ml-auto px-5 d-block font-weight-bold mt-2 tertiary_btn"><i class="fa fa-check mr-3"></i>Valider</button>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

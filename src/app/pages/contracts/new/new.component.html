@@ -1,0 +1,174 @@
+
+<div class="content-wrapper pb-4">
+    <h2 class="py-lg-5 my-5 text-center font-weight-light"><span class="font-weight-bold">Nouveaux </span><span class="tertiary_clr">Contract</span></h2>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+            <h4 class="pb-3 text-center font-weight-light"><span class="font-weight-bold">Parti Documents</span></h4>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="row">
+            <div class="col-12">
+              <div class="input-group mb-3">
+                  <div class="input-group-prepend w-50">
+                    <span class="input-group-text secondary_bg seconday_clr font-weight-light black_box_2 text-center d-block w-100" id="Nom_distributeur"><span class="font-weight-normal">D</span>istributeur</span>
+                  </div>
+                  <input type="text" class="form-control text-center" placeholder="Ecrire ici ..." aria-label="Nom_distributeur" aria-describedby="Nom_distributeur">
+                </div>
+          </div>
+          <div class="col-12">
+              <div class="input-group mb-3">
+                  <div class="input-group-prepend w-50">
+                    <span class="input-group-text secondary_bg seconday_clr font-weight-light black_box_2 text-center d-block w-100" id="Code_distributeur"><span class="font-weight-normal">C</span>ode distributeur</span>
+                  </div>
+                  <input type="text" class="form-control text-center" placeholder="Ecrire ici ..." aria-label="Code_distributeur" aria-describedby="Code_distributeur">
+                </div>
+          </div>  
+          </div>
+        </div>
+        <div class="col-12 col-md-6 ">
+          <div class="row">
+            <div class="col-12">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend w-50">
+                      <span class="input-group-text secondary_bg seconday_clr font-weight-light black_box_2 text-center d-block w-100" id="Nom_pointvent"><span class="font-weight-normal">P</span>oint de vent</span>
+                    </div>
+                    <input type="text" class="form-control text-center" placeholder="Ecrire ici ..." aria-label="Nom_pointvent" aria-describedby="Nom_pintvent">
+                  </div>
+            </div>
+            <div class="col-12">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend w-50">
+                      <span class="input-group-text secondary_bg seconday_clr font-weight-light black_box_2 text-center d-block w-100" id="Code_pointvent"><span class="font-weight-normal">C</span>ode point de vent</span>
+                    </div>
+                    <input type="text" class="form-control text-center" placeholder="Ecrire ici ..." aria-label="Code_pointvent" aria-describedby="Code_pintvent">
+                  </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 mx-auto mb-3">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend w-50">
+                  <span class="input-group-text secondary_bg seconday_clr font-weight-light black_box_2 text-center d-block w-100" id="Nom_responsable"><span class="font-weight-normal">R</span>esponsable</span>
+                </div>
+                <input type="text" class="form-control text-center" placeholder="Ecrire ici ..." aria-label="Nom_responsable" aria-describedby="Nom_responsable">
+              </div>
+        </div>
+      </div>
+      <div class="row">
+            <div class="col-12">
+                <h4 class="pb-3 text-center font-weight-light"><span class="font-weight-bold">Parti Contract</span></h4>
+            </div>
+            <!--DATE FORM-->
+            <div class="col-12 col-md-6">
+              <form class="form-inline mb-3">
+                <div class="form-group w-100">
+                    <div class="input-group-prepend w-50">
+                        <span class="input-group-text secondary_bg seconday_clr font-weight-light black_box_2 text-center d-block w-100 labele-box" id="date_contract"><span class="font-weight-normal">D</span>ate Contract</span>
+                      </div>
+                  <div class="input-group flex-1-2 w-50 date-box">
+                    <input class="form-control date-box" placeholder="yyyy-mm-dd"
+                            name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"><i class="fa fa-calendar-week"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend w-50">
+                      <span class="input-group-text secondary_bg seconday_clr font-weight-light black_box_2 text-center d-block w-100" id="Num_contract"><span class="font-weight-normal">N°</span> contract</span>
+                    </div>
+                    <input type="text" class="form-control text-center" placeholder="Ecrire ici ..." aria-label="Num_contract" aria-describedby="Num_contract">
+                  </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend w-50">
+                      <span class="input-group-text secondary_bg seconday_clr font-weight-light black_box_2 text-center d-block w-100" id="Nom_client"><span class="font-weight-normal">N</span>om de client</span>
+                    </div>
+                    <input type="text" class="form-control text-center" placeholder="Ecrire ici ..." aria-label="Nom_client" aria-describedby="Nom_client">
+                  </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend w-50">
+                      <span class="input-group-text secondary_bg seconday_clr font-weight-light black_box_2 text-center d-block w-100" id="Num_ligne"><span class="font-weight-normal">N°</span> ligne</span>
+                    </div>
+                    <input type="text" class="form-control text-center" placeholder="Ecrire ici ..." aria-label="Num_ligne" aria-describedby="Num_ligne">
+                  </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend w-50">
+                      <span class="input-group-text secondary_bg seconday_clr font-weight-light black_box_2 text-center d-block w-100" id="Num_icc"><span class="font-weight-normal">N°</span> ICC</span>
+                    </div>
+                    <input type="text" class="form-control text-center" placeholder="Ecrire ici ..." aria-label="Num_icc" aria-describedby="Num_icc">
+                  </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend w-50">
+                      <span class="input-group-text secondary_bg seconday_clr font-weight-light black_box_2 text-center d-block w-100" id="Marque_terminal"><span class="font-weight-normal">M</span>arque du terminal</span>
+                    </div>
+                    <input type="text" class="form-control text-center" placeholder="Ecrire ici ..." aria-label="Marque_terminal" aria-describedby="Marque_terminal">
+                  </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend w-50">
+                      <span class="input-group-text secondary_bg seconday_clr font-weight-light black_box_2 text-center d-block w-100" id="Num_imei"><span class="font-weight-normal">N°</span> IMEI</span>
+                    </div>
+                    <input type="text" class="form-control text-center" placeholder="Ecrire ici ..." aria-label="Num_imei" aria-describedby="Num_imei">
+                  </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend w-50">
+                      <span class="input-group-text secondary_bg seconday_clr font-weight-light black_box_2 text-center d-block w-100" for="Type_forfait"><span class="font-weight-normal">T</span>ype:</span>
+                    </div>
+                    <select class="custom-select" id="Type_forfait" (change)="selectTypeF($event)">
+                        <option selected disabled>--Choisir--</option>
+                        <option value="1">CIN</option>
+                        <option value="2">P.B</option>
+                        <option value="3">S.C</option>
+                        <option value="4">RIB</option>
+                        <option value="5">R.C</option>
+                        <option value="6">Autres</option>
+                      </select>
+                  </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend w-50">
+                      <span class="input-group-text secondary_bg seconday_clr font-weight-light black_box_2 text-center d-block w-100" id="id_autres"><span class="font-weight-normal">A</span>utres</span>
+                    </div>
+                    <input type="text" class="form-control text-center" placeholder="Ecrire ici ..." aria-label="id_autres" aria-describedby="id_autres">
+                  </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="input-group mb-3" [ngClass]="(isDisabled)? 'disabled-class':''">
+                    <div class="input-group-prepend w-50">
+                      <span class="input-group-text secondary_bg seconday_clr font-weight-light black_box_2 text-center d-block w-100" id="id_remarques"><span class="font-weight-normal">R</span>emarques</span>
+                    </div>
+                    <input type="text" class="form-control text-center" [ngClass]="(isDisabled)? 'disabled-class':''" placeholder="Ecrire ici ..." aria-label="id_remarques" aria-describedby="id_remarques" [disabled]='isDisabled'>
+                  </div>
+            </div>
+            <div class="col-8 mx-auto mt-0 pt-3">
+                <button type="button" class="btn btn-success mr-auto mr-lg-0 w-100 ml-auto px-5 d-block font-weight-bold mt-2 tertiary_btn"><i class="fa fa-check mr-3"></i>Valider</button>
+              </div>
+      </div>
+    </div>
+</div>
