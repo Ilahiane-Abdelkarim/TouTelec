@@ -92,6 +92,29 @@ body { margin: 0; font-family: 'Roboto', "Helvetica Neue", sans-serif; }
     flex: 1 1 auto;
     width: 1%;
 }
+.mx-w96 {
+    max-width: 96% !important;
+    margin-bottom: 1rem;
+}
+
+.table-shadow {
+    box-shadow: 3px 5px 29px 2px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 3px 5px 29px 2px rgba(0,0,0,0.15);
+    -moz-box-shadow: 3px 5px 29px 2px rgba(0,0,0,0.15);
+}
+
+.btn_delete {
+    background: #e52d27;  /* fallback for old browsers */
+    // background: -webkit-linear-gradient(to right, #b31217, #e52d27);  /* Chrome 10-25, Safari 5.1-6 */
+    // background: linear-gradient(to right, #b31217, #e52d27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.btn_update {
+    background: #11998e;  /* fallback for old browsers */
+    // background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+    // background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
 
 @media (max-width: 600px) {
     .flex-1-2 {

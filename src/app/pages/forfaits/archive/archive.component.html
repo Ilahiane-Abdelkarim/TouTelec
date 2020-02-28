@@ -1,27 +1,26 @@
 <div class="content-wrapper">
     <h2 class="py-5 my-5 text-center font-weight-light"><span class="font-weight-bold">Forfaits </span><span class="tertiary_clr">Archiver</span></h2>
-
-    <table class="table table-striped ">
-        <thead>
-        <tr>
-        <th scope="col" class="text-center minw-300">Nom</th>
-        <th scope="col" class="text-center minw-100">Prix</th>
-        <th scope="col" class="text-center minw-100">Date de creation</th>
-        <th colspan="2" class="text-center maxw-100">Gestion</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let forfait of listForfaits">
-        <th scope="row" class="text-center">nom1</th>
-        <td class="text-center">prix1</td>
-        <td class="text-center">date1</td>
-        <td class="maxw-36"><button type="button" class="btn btn-info d-block mx-auto" [routerLink]="['/forfaits/edit']"><i class="fa fa-pencil"></i></button></td>
-        <td class="maxw-36"><button type="button" class="btn btn-danger d-block mx-auto"><i class="fa fa-trash"></i></button></td>
-        </tr>
-        </tbody>
-    </table>
-      
-      <div class="d-flex justify-content-between p-2">
+    <div class="table-responsive table-shadow mx-auto mx-w96">
+      <table class="table table-striped">
+          <thead>
+          <tr>
+          <th scope="col" class="text-center minw-300">Nom</th>
+          <th scope="col" class="text-center minw-100">Prix</th>
+          <th scope="col" class="text-center minw-100">Date de creation</th>
+          <th colspan="2" class="text-center maxw-100">Gestion</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let forfait of listForfaits">
+          <th scope="row" class="text-center">{{forfait.nom}}</th>
+          <td class="text-center">{{forfait.prix}} DH</td>
+          <td class="text-center">{{forfait.date | date: 'dd-MM-yyyy'}}</td>
+          <td class="maxw-36"><button type="button" class="btn btn-info d-block mx-auto btn_btn_update" (click)='restaurerForfait(forfait.id)'><i class="fa fa-undo-alt mr-2"></i>Restaurer</button></td>
+          </tr>
+          </tbody>
+      </table>
+    </div>  
+      <div class="d-flex justify-content-between p-2 mx-w96 mx-auto">
         <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize">
         </ngb-pagination>
       

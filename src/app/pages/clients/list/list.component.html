@@ -1,3 +1,30 @@
 <div class="content-wrapper">
-    <p class="py-5 my-5 text-center">Clients list works!</p>
+    <h2 class="py-5 my-5 text-center font-weight-light"><span class="font-weight-bold">Liste Des </span><span class="tertiary_clr">Clients</span></h2>
+    <div class="table-responsive mx-auto mx-w96 table-shadow">
+      <table class="table table-striped ">
+          <thead>
+          <tr>
+          <th scope="col" class="text-center minw-300">Nom de Client</th>
+          <th scope="col" class="text-center minw-100">Forfait</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let client of listClients">
+          <th scope="row" class="text-center">nom1</th>
+          <td class="text-center">prix1</td>
+          </tr>
+          </tbody>
+      </table>
+    </div>
+      
+      <div class="d-flex justify-content-between p-2 mx-w96 mx-auto">
+        <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize">
+        </ngb-pagination>
+      
+        <select class="custom-select" style="width: auto" [(ngModel)]="pageSize">
+          <option [ngValue]="2">2 items per page</option>
+          <option [ngValue]="4">4 items per page</option>
+          <option [ngValue]="6">6 items per page</option>
+        </select>
+      </div>
 </div>

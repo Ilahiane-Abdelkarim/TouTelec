@@ -8,6 +8,9 @@ import { LayoutComponent } from './layout/layout.component';
 import { SharedModule } from './shared/shared.module';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { OktaAuthModule } from '@okta/okta-angular';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -23,8 +26,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     FormsModule,
+    HttpClientModule,
+    OktaAuthModule.initAuth({
+      issuer: 'https://dev-612543.okta.com/oauth2/default',
+      redirectUri: 'http://localhost:4200/implicit/callback',
+      clientId: '0oa25dncsC47R9xxk4x6',
+    }),
+  ],
+  exports: [
+    OktaAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
