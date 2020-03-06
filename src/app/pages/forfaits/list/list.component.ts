@@ -15,10 +15,9 @@ export class ListComponent implements OnInit {
 
   modalCallback: () => void;
   //
-  listForfaits: any[] = [];
+  listForfaits = [];
   page = 1;
   pageSize = 4;
-  collectionSize = this.listForfaits.length;
 
   // get forfait(): Country[] {
   //   return listForfaits
@@ -35,8 +34,10 @@ export class ListComponent implements OnInit {
   private getForfait() {
     this.server.get('forfait').then((response: any) => {
       console.log('Response', response);
-      this.listForfaits = response;
-
+      this.listForfaits = response.slice((this.page - 1) * this.pageSize, (this.page - 1) * this.pageSize + this.pageSize);
+      // return this.listForfaits
+      // .map((forfaits, i) => ({id: i + 1, ...forfaits}))
+      // .slice((this.page - 1) * this.pageSize, (this.page - 1) * this.pageSize + this.pageSize);
     });
   }
 

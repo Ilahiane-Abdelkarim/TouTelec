@@ -7,6 +7,7 @@ import { NewComponent } from './new/new.component';
 import { ArchiveComponent } from './archive/archive.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 
 @NgModule({
@@ -14,9 +15,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   imports: [
     CommonModule,
     ForfaitsRoutingModule,
+    NgbModule,
+    NgxPaginationModule,
     ReactiveFormsModule,
-    FormsModule,
-    NgbModule
+    FormsModule
   ],
 
 })

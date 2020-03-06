@@ -24,15 +24,31 @@
 
                <!-- Forfaits -->
                <li class="nav-item has-treeview">
-                <a class="nav-link pointeur">
-                  <i class="nav-icon fas fa-folder-plus"></i>
+                <a class="nav-link pointeur" (click)="onClick_forfait()">
+                  <i class="nav-icon fas fa-folder-plus" *ngIf="!forfait_stat"></i>
+                  <i class="nav-icon fas fa-folder-minus" *ngIf="forfait_stat"></i>
                   <p>
                     Forfaits
-                    <i class="fas fa-angle-left right"></i>
+                    <i class="fas fa-angle-left right nav-arrow " [ngClass]="(forfait_stat)? 'elementToAnimate': '' " ></i>
+                    <!-- <i class="fas fa-angle-down right"   *ngIf="forfait_stat"></i> -->
                   </p>
                 </a>
-                <ul class="nav nav-treeview">
-                  <li class="nav-item">
+                <div class="ml-2 list1" *ngIf="forfait_stat" >
+                  <a [routerLink]="['/forfaits/list']" class="nav-link">
+                    <i class="far fa-folder nav-icon text-info"></i>
+                    <p>List</p>
+                  </a>
+                  <a [routerLink]="['/forfaits/new']" class="nav-link">
+                    <i class="far fa-folder nav-icon text-warning"></i>
+                    <p>Nouveaux</p>
+                  </a>
+                  <a [routerLink]="['/forfaits/archive']" class="nav-link">
+                    <i class="far fa-folder nav-icon text-danger"></i>
+                    <p>Archive</p>
+                  </a>
+                </div>
+                <!-- <ul class="nav nav-twoview">
+                  <li class="">
                     <a [routerLink]="['/forfaits/list']" class="nav-link">
                       <i class="far fa-folder nav-icon text-info"></i>
                       <p>List</p>
@@ -50,19 +66,34 @@
                       <p>Archive</p>
                     </a>
                   </li>
-                </ul>
+                </ul> -->
               </li>
 
               <!-- Contrats -->
               <li class="nav-item has-treeview">
-                <a class="nav-link pointeur">
-                  <i class="nav-icon fas fa-folder-plus"></i>
+                <a class="nav-link pointeur" (click)="onClick_contracts()">
+                  <i class="nav-icon fas fa-folder-plus" *ngIf="!contracts_stat"></i>
+                  <i class="nav-icon fas fa-folder-minus" *ngIf="contracts_stat"></i>
                   <p>
                     Contrats
-                    <i class="fas fa-angle-left right"></i>
+                    <i class="fas fa-angle-left right" [ngClass]="(contracts_stat)? 'elementToAnimate': '' "></i>
                   </p>
                 </a>
-                <ul class="nav nav-treeview">
+                <div class="ml-2 list1" *ngIf="contracts_stat" >
+                  <a [routerLink]="['/contracts/list']" class="nav-link">
+                    <i class="far fa-folder nav-icon text-info"></i>
+                    <p>List</p>
+                  </a>
+                  <a [routerLink]="['/contracts/new']" class="nav-link">
+                    <i class="far fa-folder nav-icon text-warning"></i>
+                    <p>Nouveaux</p>
+                  </a>
+                  <a [routerLink]="['/contracts/archive']" class="nav-link">
+                    <i class="far fa-folder nav-icon text-danger"></i>
+                    <p>Archive</p>
+                  </a>
+                </div>
+                <!-- <ul class="nav nav-treeview">
                   <li class="nav-item">
                     <a [routerLink]="['/contracts/list']" class="nav-link">
                       <i class="far fa-folder nav-icon text-info"></i>
@@ -81,7 +112,7 @@
                       <p>Archive</p>
                     </a>
                   </li>
-                </ul>
+                </ul> -->
               </li>
               
           <li class="nav-item">

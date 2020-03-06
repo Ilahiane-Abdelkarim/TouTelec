@@ -5,6 +5,23 @@
 .pointeur {
     cursor: pointer;
 }
+
+.nav-arrow {
+    animation: 3s infinite 0s linear;
+}
+@keyframes arrowAnimation{
+    0%{
+        transform: rotate(0deg);
+        }
+    50%{
+        transform: rotate(180deg);
+        }
+}
+
+.elementToAnimate{
+    transform: rotate(-90deg);
+}
+
 // [class*=sidebar-dark] .user-panel{
 //     border-bottom: 0 !important;
 // }
